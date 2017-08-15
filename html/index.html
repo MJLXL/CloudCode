@@ -13,18 +13,58 @@
 		<script type="text/javascript">
 			mui.init()
 	
+			var elment = document.getElementById("btn");
+			function b(){
+				alert("come on");
+				loadingFunction();
+			}
 			
+			/** button Loading **/
+			function loadingFunction(){
+				var btnelem = document.getElementById("btnTextId")
+				mui(btnelem).button('loading');
+			}
 			
-		mui("#mui-btn-primary").on('tap','mui-btn-primary',function(){
-			alert("aa");
-		});
-						
 						
 		</script>
+		
+<!--卡片视图-->
+<div class="mui-card">
+	<!--页眉，放置标题-->
+	<div class="mui-card-header mui-card-media" style="background-color: #4CD964;">
+		<font style="color: #333333;">页眉</font>
+	</div>
+	<!--内容区-->
+	<div class="mui-card-content">
+		<img src="../pic/pic.png"/>
+	</div>
+	<!--页脚，放置补充信息或支持的操作-->
+	<div class="mui-card-footer">hello MJ AJ </div>
+</div>
 
-    	<button id="btn" type="button" class="mui-btn-primary">确认</button>
-    	
-  	index...
+<!--折叠面板-->
+ 	<ul class="mui-table-view"> 
+        <li class="mui-table-view-cell mui-collapse "><!--mui-active // 默认打开-->
+            <a class="mui-navigate-right" href="#">面板1</a>
+            <span class="mui-badge mui-badge-warning" style="margin-right: 20px;">角标</span>
+            <div class="mui-collapse-content">
+                <p>面板1子内容</p>
+            </div>
+        </li>
+    </ul>
+    
+<!--数字角标-->
+<span class="mui-badge">1</span>
+<span class="mui-badge mui-badge-primary mui-badge-inverted">12</span> <!--mui-badge-inverted // 无底色-->
+<span class="mui-badge mui-badge-success">123</span>
+<span class="mui-badge mui-badge-warning">3</span>
+<span class="mui-badge mui-badge-danger">45</span>
+<span class="mui-badge mui-badge-purple">456</span>
+
+<!--按钮-->
+<!--按钮点击/js方法点击-->
+    <button id="btn" type="button" class="mui-btn-primary" onclick="b()">确认</button>
+  	<button type="button" class="mui-btn mui-btn-success mui-btn-outlined" id="btnTextId">文字按钮</button>
 		
 	</body>
 
