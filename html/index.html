@@ -15,24 +15,45 @@
 	
 			var elment = document.getElementById("btn");
 			function b(){
-				alert("come on");
-				loadingFunction();
+				//alert("come on");
+				//loadingFunction();
+				//cardHeadFunction();
+				checkboxId();
 			}
 			
 			/** button Loading **/
 			function loadingFunction(){
 				var btnelem = document.getElementById("btnTextId")
 				mui(btnelem).button('loading');
+			};
+			/*card Id*/
+			function cardHeadFunction(){
+				var id = document.getElementById("cardHeadId");
+				id.textContent  = "hello";
+			};
+			/*checkbox*/
+			function checkboxId(){
+				var id = document.getElementById("checkboxId");
+				id.style.left;
+				//id.style.mui('mui-left');
 			}
-			
 						
 		</script>
+		
+
+
+
+<!--复选框-->
+<div id="checkboxId" class="mui-input-row mui-checkbox"> <!--mui-disabled // 禁用-->
+  <label>checkbox示例</label>
+  <input name="checkbox1" value="Item 1" type="checkbox" checked>
+</div>
 		
 <!--卡片视图-->
 <div class="mui-card">
 	<!--页眉，放置标题-->
 	<div class="mui-card-header mui-card-media" style="background-color: #4CD964;">
-		<font style="color: #333333;">页眉</font>
+		<font style="color: #333333;" id="cardHeadId">页眉</font>
 	</div>
 	<!--内容区-->
 	<div class="mui-card-content">
